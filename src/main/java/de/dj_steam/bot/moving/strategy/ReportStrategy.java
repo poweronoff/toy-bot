@@ -11,7 +11,11 @@ public class ReportStrategy implements ChangingStrategy {
     @Override
     public void change(ToyBot toyBot, ToyBotField toyBotField, String command) {
         if (command.equals(RobotEngine.REPORT)) {
-            System.out.println(toyBot);
+            printReport(toyBot);
         }
+    }
+
+    private void printReport(final ToyBot toyBot) {
+        System.out.println(toyBot);
     }
 }
