@@ -19,8 +19,9 @@ public class LoopingConsole {
 
         printUsageBanner();
 
+        RobotEngine robotEngine = new RobotEngine();
+
         while (true) {
-            RobotEngine robotEngine = new RobotEngine();
             System.out.print("> ");
             String input = br.readLine();
             robotEngine.commandBot(input);
