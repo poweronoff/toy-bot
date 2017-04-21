@@ -8,6 +8,7 @@ import de.dj_steam.bot.domain.Position;
 import de.dj_steam.bot.domain.ToyBot;
 import de.dj_steam.bot.domain.ToyBotField;
 import de.dj_steam.bot.moving.strategy.ChangingStrategy;
+import de.dj_steam.bot.moving.strategy.ReportStrategy;
 import de.dj_steam.bot.moving.strategy.TurnStrategy;
 
 /**
@@ -46,5 +47,6 @@ public class RobotEngine {
     private void initChangingStrategies() {
         changingStrategies = new ArrayList<>();
         changingStrategies.add(new TurnStrategy());
+        changingStrategies.add(new ReportStrategy());
     }
 }
