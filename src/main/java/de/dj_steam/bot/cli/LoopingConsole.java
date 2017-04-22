@@ -29,7 +29,12 @@ public class LoopingConsole {
         while (true) {
             System.out.print("> ");
             String input = br.readLine();
-            robotEngine.commandBot(createCommand(input));
+            try {
+                robotEngine.commandBot(createCommand(input));
+            }catch (InvalidUserInputException e) {
+                System.out.println("\nInput error occurred! Message: " + e.getMessage() +"\n");
+                printUsageBanner();
+            }
 
             if (input.trim().toLowerCase().equals(EXIT_COMMAND)) {
                 System.out.println("exiting");
