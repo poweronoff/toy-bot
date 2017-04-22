@@ -3,7 +3,11 @@ package de.dj_steam.bot.cli;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Optional;
 
+import org.apache.commons.lang3.StringUtils;
+
+import de.dj_steam.bot.domain.Command;
 import de.dj_steam.bot.engine.RobotEngine;
 
 /**
@@ -13,6 +17,7 @@ import de.dj_steam.bot.engine.RobotEngine;
 public class LoopingConsole {
 
     private static final String EXIT_COMMAND = "exit";
+    public static final String COMMAND_DELIMITER = " ";
 
     public static void main(final String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -24,13 +29,29 @@ public class LoopingConsole {
         while (true) {
             System.out.print("> ");
             String input = br.readLine();
-            robotEngine.commandBot(input);
+            robotEngine.commandBot(createCommand(input));
 
             if (input.trim().toLowerCase().equals(EXIT_COMMAND)) {
                 System.out.println("exiting");
                 return;
             }
         }
+    }
+
+    static Command createCommand(final String input) {
+        String[] split = input.split(COMMAND_DELIMITER);
+
+        Command command;
+
+        if(split.length == 2) {
+            command = new Command(split[0], Optional.of(split[1]));
+        } else if(split.length == 1 && !StringUtils.isEmpty(split[0])){
+            command = new Command(split[0], Optional.empty());
+        } else {
+            throw  new InvalidUserInputException("Invalid user input");
+        }
+
+        return command;
     }
 
     private static void printUsageBanner() {

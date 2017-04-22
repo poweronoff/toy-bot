@@ -2,9 +2,12 @@ package de.dj_steam.bot.engine;
 
 import static org.junit.Assert.assertEquals;
 
+import java.util.Optional;
+
 import org.junit.Before;
 import org.junit.Test;
 
+import de.dj_steam.bot.domain.Command;
 import de.dj_steam.bot.domain.Direction;
 import de.dj_steam.bot.domain.Position;
 import de.dj_steam.bot.domain.ToyBot;
@@ -28,35 +31,39 @@ public class RobotEngineTest {
 
     @Test
     public void testTurnLeftCommand() {
+        Command turnLeftCommand = new Command(Command.TURN_LEFT, Optional.empty());
+
         assertEquals(Direction.NORTH, toyBot.getDirection());
 
-        robotEngine.commandBot(RobotEngine.TURN_LEFT);
+        robotEngine.commandBot(turnLeftCommand);
         assertEquals(Direction.WEST, toyBot.getDirection());
 
-        robotEngine.commandBot(RobotEngine.TURN_LEFT);
+        robotEngine.commandBot(turnLeftCommand);
         assertEquals(Direction.SOUTH, toyBot.getDirection());
 
-        robotEngine.commandBot(RobotEngine.TURN_LEFT);
+        robotEngine.commandBot(turnLeftCommand);
         assertEquals(Direction.EAST, toyBot.getDirection());
 
-        robotEngine.commandBot(RobotEngine.TURN_LEFT);
+        robotEngine.commandBot(turnLeftCommand);
         assertEquals(Direction.NORTH, toyBot.getDirection());
     }
 
     @Test
     public void testTurnRightCommand() {
+
+        Command turnRightCommand = new Command(Command.TURN_RIGHT, Optional.empty());
         assertEquals(Direction.NORTH, toyBot.getDirection());
 
-        robotEngine.commandBot(RobotEngine.TURN_RIGHT);
+        robotEngine.commandBot(turnRightCommand);
         assertEquals(Direction.EAST, toyBot.getDirection());
 
-        robotEngine.commandBot(RobotEngine.TURN_RIGHT);
+        robotEngine.commandBot(turnRightCommand);
         assertEquals(Direction.SOUTH, toyBot.getDirection());
 
-        robotEngine.commandBot(RobotEngine.TURN_RIGHT);
+        robotEngine.commandBot(turnRightCommand);
         assertEquals(Direction.WEST, toyBot.getDirection());
 
-        robotEngine.commandBot(RobotEngine.TURN_RIGHT);
+        robotEngine.commandBot(turnRightCommand);
         assertEquals(Direction.NORTH, toyBot.getDirection());
     }
 }

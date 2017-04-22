@@ -2,13 +2,15 @@ package de.dj_steam.bot.moving;
 
 import static org.junit.Assert.assertEquals;
 
+import java.util.Optional;
+
 import org.junit.Before;
 import org.junit.Test;
 
+import de.dj_steam.bot.domain.Command;
 import de.dj_steam.bot.domain.Direction;
 import de.dj_steam.bot.domain.Position;
 import de.dj_steam.bot.domain.ToyBot;
-import de.dj_steam.bot.engine.RobotEngine;
 
 /**
  * @author steam
@@ -25,13 +27,13 @@ public class DirectionCalculatorTest {
     @Test
     public void testCalculateOnTurnLeft() {
         ToyBot toyBot = new ToyBot(Direction.NORTH, new Position());
-        assertEquals(Direction.WEST, directionCalculator.calculateNewDirection(toyBot, RobotEngine.TURN_LEFT));
+        assertEquals(Direction.WEST, directionCalculator.calculateNewDirection(toyBot, new Command(Command.TURN_LEFT, Optional.empty())));
     }
 
     @Test
     public void testCalculateOnTurnRight() {
         ToyBot toyBot = new ToyBot(Direction.NORTH, new Position());
-        assertEquals(Direction.EAST, directionCalculator.calculateNewDirection(toyBot, RobotEngine.TURN_RIGHT));
+        assertEquals(Direction.EAST, directionCalculator.calculateNewDirection(toyBot, new Command( Command.TURN_RIGHT, Optional.empty())));
     }
 
 }
