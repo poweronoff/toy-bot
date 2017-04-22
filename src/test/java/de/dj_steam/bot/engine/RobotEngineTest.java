@@ -66,4 +66,26 @@ public class RobotEngineTest {
         robotEngine.commandBot(turnRightCommand);
         assertEquals(Direction.NORTH, toyBot.getDirection());
     }
+
+    @Test
+    public void testPlaceCommand() {
+        Command placeCommand = new Command(Command.PLACE, Optional.empty());
+        assertEquals(new Position(0, 0), toyBot.getPosition());
+
+        robotEngine.commandBot(placeCommand);
+        assertEquals(new Position(0, 0), toyBot.getPosition());
+
+        placeCommand = new Command(Command.PLACE, Optional.of("0,2,NORTH"));
+        robotEngine.commandBot(placeCommand);
+        assertEquals(new Position(0, 2), toyBot.getPosition());
+
+        placeCommand = new Command(Command.PLACE, Optional.of("5,1,NORTH"));
+        robotEngine.commandBot(placeCommand);
+        assertEquals(new Position(0, 2), toyBot.getPosition());
+
+        placeCommand = new Command(Command.PLACE, Optional.of("0,3,WEST"));
+        robotEngine.commandBot(placeCommand);
+        assertEquals(new Position(0,3), toyBot.getPosition());
+        assertEquals(Direction.WEST, toyBot.getDirection());
+    }
 }

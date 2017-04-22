@@ -7,6 +7,6 @@ import lombok.Getter;
  */
 @Getter
 public class ToyBotField {
-    private int width = 5;
-    private int height = 5;
+    private int width = 4;
+    private int height = 4;
 }
