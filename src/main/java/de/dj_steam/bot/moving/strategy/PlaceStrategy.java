@@ -39,7 +39,6 @@ public class PlaceStrategy implements ChangingStrategy {
 
     boolean canBePlaced(final ToyBotField toyBotField, final Command command) {
         String[] arguments = command.getArguments().get().split(",");
-        return (toyBotField.getWidth() >= Integer.parseInt(arguments[0].trim()) &&
-                toyBotField.getHeight() >= Integer.parseInt(arguments[1].trim()));
+        return toyBotField.isInsideTheField(new Position(Integer.parseInt(arguments[0].trim()),Integer.parseInt(arguments[1].trim())));
     }
 }
