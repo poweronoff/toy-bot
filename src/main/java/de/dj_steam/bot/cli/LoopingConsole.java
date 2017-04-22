@@ -63,7 +63,7 @@ public class LoopingConsole {
         System.out.println("####################################################");
         System.out.println("Commands:");
         System.out.println("PLACE X,Y,F - place robot on position X,Y - coordinates, and direction (NORTH|SOUTH|WEST|EAST)");
-        System.out.println("MOVE - change the robot to the next field in facing direction");
+        System.out.println("MOVE - move the robot to the next field in facing direction");
         System.out.println("LEFT - turn the robot to the left");
         System.out.println("RIGHT - turn the robot to the right");
         System.out.println("REPORT - show robots position and facing direction");
