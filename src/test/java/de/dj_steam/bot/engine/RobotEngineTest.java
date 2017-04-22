@@ -1,4 +1,4 @@
-package de.dj_steam.bot;
+package de.dj_steam.bot.engine;
 
 import static org.junit.Assert.assertEquals;
 
@@ -9,7 +9,6 @@ import de.dj_steam.bot.domain.Direction;
 import de.dj_steam.bot.domain.Position;
 import de.dj_steam.bot.domain.ToyBot;
 import de.dj_steam.bot.domain.ToyBotField;
-import de.dj_steam.bot.engine.RobotEngine;
 
 /**
  * @author steam
