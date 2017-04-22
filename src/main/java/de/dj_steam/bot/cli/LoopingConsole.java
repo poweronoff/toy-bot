@@ -17,7 +17,7 @@ import de.dj_steam.bot.engine.RobotEngine;
 public class LoopingConsole {
 
     private static final String EXIT_COMMAND = "exit";
-    public static final String COMMAND_DELIMITER = " ";
+    private static final String COMMAND_DELIMITER = " ";
 
     public static void main(final String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

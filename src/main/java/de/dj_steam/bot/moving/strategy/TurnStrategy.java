@@ -17,7 +17,7 @@ public class TurnStrategy implements ChangingStrategy {
     }
 
     @Override
-    public void change(ToyBot toyBot, ToyBotField toyBotField, Command command) {
+    public void change(final ToyBot toyBot, final ToyBotField toyBotField, final Command command) {
         if (command.getCommand().equals(Command.TURN_LEFT) || command.getCommand().equals(Command.TURN_RIGHT)) {
             toyBot.setDirection(directionCalculator.calculateNewDirection(toyBot, command));
         }

@@ -1,5 +1,6 @@
 package de.dj_steam.bot.domain;
 
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.ToString;
 
@@ -9,6 +10,7 @@ import lombok.ToString;
 
 @Getter
 @ToString
+@EqualsAndHashCode
 public class Position {
     private int x;
     private int y;

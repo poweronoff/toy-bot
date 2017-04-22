@@ -1,5 +1,6 @@
 package de.dj_steam.bot.domain;
 
+import java.util.List;
 import java.util.Optional;
 
 import lombok.EqualsAndHashCode;
@@ -7,6 +8,13 @@ import lombok.Getter;
 
 /**
  * @author steam
+ *
+ * this is a general command implementation.
+ *
+ * The arguments as {@link String} is intentionally, to be flexible
+ * define some different argument formats.
+ *
+ * Use some kind of {@link List} for arguments in futher implementations.
  */
 
 @Getter
@@ -20,6 +28,7 @@ public class Command {
     public static final String REPORT = "REPORT";
 
     private String command;
+
     private Optional<String> arguments;
 
     public Command(final String command, Optional<String> arguments) {
