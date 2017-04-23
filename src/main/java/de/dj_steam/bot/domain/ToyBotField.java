@@ -4,7 +4,11 @@ import lombok.Getter;
 
 /**
  * @author steam
+ *
+ * the field to move robot over. It incapsulate the logic for calculate that the robot will
+ * move over the border on the next step or on place it on the field
  */
+
 @Getter
 public class ToyBotField {
     private int width = 4;

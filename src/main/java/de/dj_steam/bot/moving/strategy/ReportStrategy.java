@@ -6,6 +6,8 @@ import de.dj_steam.bot.domain.ToyBotField;
 
 /**
  * @author steam
+ *
+ * strategy implementing how the ToyBot reporting his position and facing direction
  */
 public class ReportStrategy implements ChangingStrategy {
     @Override

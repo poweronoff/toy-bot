@@ -11,6 +11,8 @@ import de.dj_steam.bot.domain.ToyBotField;
 
 /**
  * @author steam
+ *
+ * strategy implementing the place logic of the ToyBot on the ToyBotField
  */
 public class PlaceStrategy implements ChangingStrategy {
 

@@ -8,6 +8,8 @@ import de.dj_steam.bot.domain.ToyBotField;
 
 /**
  * @author steam
+ *
+ * strategy implementing how the ToyBot is moving
  */
 public class MoveStrategy implements ChangingStrategy {
     @Override

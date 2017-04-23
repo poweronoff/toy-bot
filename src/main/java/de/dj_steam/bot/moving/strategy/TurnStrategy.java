@@ -7,6 +7,8 @@ import de.dj_steam.bot.moving.DirectionCalculator;
 
 /**
  * @author steam
+ *
+ * strategy implementing how the ToyBot do the turn
  */
 public class TurnStrategy implements ChangingStrategy {
 

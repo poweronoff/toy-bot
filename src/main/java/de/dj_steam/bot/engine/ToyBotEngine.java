@@ -16,20 +16,22 @@ import de.dj_steam.bot.moving.strategy.TurnStrategy;
 
 /**
  * @author steam
+ *
+ * toyBotEngine implements setup of moving strategies and initial setup of ToyBot and ToyBotField
  */
-public class RobotEngine {
+public class ToyBotEngine {
 
     private final ToyBotField toyBotField;
     private final ToyBot toyBot;
     private List<ChangingStrategy> changingStrategies;
 
-    public RobotEngine() {
+    public ToyBotEngine() {
         this.toyBot = new ToyBot(Direction.NORTH, new Position());
         this.toyBotField = new ToyBotField();
         initChangingStrategies();
     }
 
-    RobotEngine(final ToyBotField toyBotField, final ToyBot toyBot) {
+    ToyBotEngine(final ToyBotField toyBotField, final ToyBot toyBot) {
         this.toyBotField = toyBotField;
         this.toyBot = toyBot;
         initChangingStrategies();

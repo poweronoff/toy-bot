@@ -6,6 +6,8 @@ import lombok.ToString;
 
 /**
  * @author steam
+ *
+ * pojo class for transport robot postion
  */
 
 @Getter
@@ -24,5 +26,4 @@ public class Position {
         this.x = x;
         this.y = y;
     }
-
 }

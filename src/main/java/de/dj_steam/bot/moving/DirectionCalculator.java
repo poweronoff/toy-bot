@@ -8,6 +8,8 @@ import de.dj_steam.bot.domain.ToyBot;
 
 /**
  * @author steam
+ *
+ * this is a helper class to calculate direction
  */
 public class DirectionCalculator {
 
