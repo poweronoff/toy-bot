@@ -1,6 +1,6 @@
 # toy-bot
 
-Many thanks to [Lorenzo Sisini](https://github.com/lorenzosisini) for this beautiful experience.
+Many thanks to [Lorenzo Sinisi](https://github.com/lorenzosisini) for this beautiful experience.
 
 
 #### Requirements
