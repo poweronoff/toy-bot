@@ -10,7 +10,7 @@ Many thanks to [Lorenzo Sinisi](https://github.com/lorenzosisini) for this beaut
 #### Quick start
 - clone the repository
 ```bash
-git clone https://poweronoff.click/steam/toy-bot.git
+git clone https://code.poweronoff.click/steam/toy-bot.git
 ```
 - build the project
 ````bash
