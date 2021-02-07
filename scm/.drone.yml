@@ -1,0 +1,15 @@
+---
+kind: pipeline
+name: "toy-bot coding challenge pipeline"
+steps:
+  -
+    commands:
+      - "mvn clean test"
+    image: "maven:3-jdk-11"
+    name: test
+  -
+    image: appleboy/drone-telegram
+    name: "send telegram notification"
+    settings:
+      to: 733452136
+      token: "986857118:AAFN9uAhYl_0WMYUE6hWGPoLArjjBBPxDnM"
