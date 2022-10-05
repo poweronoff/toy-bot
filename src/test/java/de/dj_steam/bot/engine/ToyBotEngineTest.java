@@ -26,7 +26,7 @@ public class ToyBotEngineTest {
     private Command moveCommand;
     private Command placeCommand;
 
-    private ToyBotField toyBotField = new ToyBotField();
+    private final ToyBotField toyBotField = new ToyBotField();
 
     @Before
     public void setup() {

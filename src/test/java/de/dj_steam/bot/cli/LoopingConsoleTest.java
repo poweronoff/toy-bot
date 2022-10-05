@@ -15,12 +15,12 @@ public class LoopingConsoleTest {
 
 
     @Test(expected = InvalidUserInputException.class)
-    public void createCommandExpectedUserInputExceptionOnEmptyInput() throws Exception {
+    public void createCommandExpectedUserInputExceptionOnEmptyInput() {
         LoopingConsole.createCommand("");
     }
 
     @Test(expected = InvalidUserInputException.class)
-    public void createCommandExpectedUserInputExceptionOnMoreThenTwoParams() throws Exception {
+    public void createCommandExpectedUserInputExceptionOnMoreThenTwoParams() {
         LoopingConsole.createCommand("INPUT X,Y,F WRONG_PARAM");
     }
 

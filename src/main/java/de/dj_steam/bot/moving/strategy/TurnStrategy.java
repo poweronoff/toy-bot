@@ -12,7 +12,7 @@ import de.dj_steam.bot.moving.DirectionCalculator;
  */
 public class TurnStrategy implements ChangingStrategy {
 
-    private DirectionCalculator directionCalculator;
+    private final DirectionCalculator directionCalculator;
 
     public TurnStrategy() {
         directionCalculator = new DirectionCalculator();

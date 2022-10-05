@@ -13,7 +13,7 @@ import de.dj_steam.bot.domain.ToyBot;
  */
 public class DirectionCalculator {
 
-    private LoopedDirectionsArrayList<Direction> directions;
+    private final LoopedDirectionsArrayList<Direction> directions;
 
     public DirectionCalculator() {
         directions = new LoopedDirectionsArrayList();

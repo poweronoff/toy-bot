@@ -10,10 +10,10 @@ import lombok.Getter;
  * @author steam
  *
  * this is a general command implementation.
- *
+ * <p>
  * The arguments as {@link String} is intentionally, to be flexible
  * define some different argument formats.
- *
+ * <p>
  * Use some kind of {@link List} for arguments in futher implementations.
  */
 
@@ -27,9 +27,9 @@ public class Command {
     public static final String PLACE = "PLACE";
     public static final String REPORT = "REPORT";
 
-    private String command;
+    private final String command;
 
-    private Optional<String> arguments;
+    private final Optional<String> arguments;
 
     public Command(final String command, Optional<String> arguments) {
         this.command = command;
