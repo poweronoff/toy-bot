@@ -5,7 +5,7 @@ Many thanks to [Lorenzo Sisini](https://github.com/lorenzosisini) for this beaut
 
 #### Requirements
 - maven 3
-- oracle JDK 8
+- openjdk 17
 
 #### Quick start
 - clone the repository
