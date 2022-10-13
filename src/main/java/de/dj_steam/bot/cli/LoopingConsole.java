@@ -36,7 +36,7 @@ public class LoopingConsole {
                 printUsageBanner();
             }
 
-            if (input.trim().toLowerCase().equals(EXIT_COMMAND)) {
+            if (input.trim().equalsIgnoreCase(EXIT_COMMAND)) {
                 System.out.println("exiting");
                 return;
             }

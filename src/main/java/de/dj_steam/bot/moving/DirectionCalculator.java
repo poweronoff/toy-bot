@@ -11,10 +11,10 @@ import de.dj_steam.bot.domain.ToyBot;
  */
 public class DirectionCalculator {
 
-    private LoopedDirectionsArrayList<Direction> directions;
+    private final LoopedDirectionsArrayList<Direction> directions;
 
     public DirectionCalculator() {
-        directions = new LoopedDirectionsArrayList();
+        directions = new LoopedDirectionsArrayList<>();
         directions.addAll(Arrays.asList(Direction.values()));
     }
 
@@ -22,9 +22,9 @@ public class DirectionCalculator {
 
         Direction actualDirection = toyBot.getDirection();
 
-        if (turnDirection.getCommand().equals(Command.TURN_LEFT)) {
+        if (turnDirection.command().equals(Command.TURN_LEFT)) {
             return directions.get(directions.indexOf(actualDirection) - 1);
-        } else if (turnDirection.getCommand().equals(Command.TURN_RIGHT)) {
+        } else if (turnDirection.command().equals(Command.TURN_RIGHT)) {
             return directions.get(directions.indexOf(actualDirection) + 1);
         }
         return toyBot.getDirection();

@@ -12,8 +12,8 @@ import lombok.ToString;
 @ToString
 @EqualsAndHashCode
 public class Position {
-    private int x;
-    private int y;
+    private final int x;
+    private final int y;
 
     public Position() {
         this.x = 0;

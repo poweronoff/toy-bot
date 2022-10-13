@@ -10,7 +10,7 @@ import org.junit.Test;
  */
 public class ToyBotFieldTest {
     @Test
-    public void isInsideTheField() throws Exception {
+    public void isInsideTheField() {
         ToyBotField toyBotField = new ToyBotField();
         assertTrue(toyBotField.isInsideTheField(new Position(0,0)));
         assertTrue(toyBotField.isInsideTheField(new Position(4,4)));

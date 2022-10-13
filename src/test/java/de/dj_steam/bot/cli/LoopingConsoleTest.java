@@ -15,28 +15,28 @@ public class LoopingConsoleTest {
 
 
     @Test(expected = InvalidUserInputException.class)
-    public void createCommandExpectedUserInputExceptionOnEmptyInput() throws Exception {
+    public void createCommandExpectedUserInputExceptionOnEmptyInput() {
         LoopingConsole.createCommand("");
     }
 
     @Test(expected = InvalidUserInputException.class)
-    public void createCommandExpectedUserInputExceptionOnMoreThenTwoParams() throws Exception {
+    public void createCommandExpectedUserInputExceptionOnMoreThenTwoParams() {
         LoopingConsole.createCommand("INPUT X,Y,F WRONG_PARAM");
     }
 
     @Test
     public void createCommandWithoutParam() {
         Command command = LoopingConsole.createCommand("INPUT");
-        assertEquals("INPUT", command.getCommand());
-        assertFalse(command.getArguments().isPresent());
+        assertEquals("INPUT", command.command());
+        assertFalse(command.arguments().isPresent());
     }
 
     @Test
     public void createCommandWithParam() {
         Command command = LoopingConsole.createCommand("INPUT X,Y,F");
-        assertEquals("INPUT", command.getCommand());
-        assertTrue(command.getArguments().isPresent());
-        assertEquals("X,Y,F", command.getArguments().get());
+        assertEquals("INPUT", command.command());
+        assertTrue(command.arguments().isPresent());
+        assertEquals("X,Y,F", command.arguments().get());
     }
 
 }

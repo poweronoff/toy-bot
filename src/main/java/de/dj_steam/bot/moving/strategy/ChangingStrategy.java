@@ -9,7 +9,7 @@ import de.dj_steam.bot.domain.ToyBotField;
  *
  * this strategy defines how the robot will be manipulated
  * implement this, if new change variant is wanted.
- *
+ * <p>
  * use {@link Command} to define new commans to implement
  */
 

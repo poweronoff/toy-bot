@@ -13,11 +13,11 @@ import de.dj_steam.bot.domain.Direction;
  * @author steam
  */
 public class LoopedDirectionsArrayListTest {
-    private LoopedDirectionsArrayList directions;
+    private LoopedDirectionsArrayList<Direction> directions;
 
     @Before
     public void setup() {
-        directions = new LoopedDirectionsArrayList();
+        directions = new LoopedDirectionsArrayList<>();
         directions.addAll(Arrays.asList(Direction.values()));
     }
 

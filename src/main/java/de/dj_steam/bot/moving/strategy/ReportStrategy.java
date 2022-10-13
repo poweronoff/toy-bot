@@ -10,7 +10,7 @@ import de.dj_steam.bot.domain.ToyBotField;
 public class ReportStrategy implements ChangingStrategy {
     @Override
     public void change(final ToyBot toyBot, final ToyBotField toyBotField, final Command command) {
-        if (command.getCommand().equals(Command.REPORT)) {
+        if (command.command().equals(Command.REPORT)) {
             printReport(toyBot);
         }
     }

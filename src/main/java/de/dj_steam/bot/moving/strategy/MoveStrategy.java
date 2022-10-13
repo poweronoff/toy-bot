@@ -12,7 +12,7 @@ import de.dj_steam.bot.domain.ToyBotField;
 public class MoveStrategy implements ChangingStrategy {
     @Override
     public void change(final ToyBot toyBot, final ToyBotField toyBotField, final Command command) {
-        if (command.getCommand().equals(Command.MOVE)) {
+        if (command.command().equals(Command.MOVE)) {
             Position newPosition = toyBot.getPosition();
 
             // TODO - refactor this ugly code
