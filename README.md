@@ -38,5 +38,3 @@ exit - exit the application
 - implement TURN_AROUND command
 - user interface
 - add random pitfalls or barriers to the field
-
-
