@@ -5,11 +5,13 @@ steps:
   -
     commands:
       - "mvn clean test"
-    image: "maven:3.8.1-jdk-11"
+    image: "maven:3.8.3-openjdk-17"
     name: test
   -
     image: appleboy/drone-telegram
     name: "send telegram notification"
     settings:
-      to: 733452136
-      token: "<INVALID_TOKEN>"
+      to:
+        from_secret: telegram_to
+      token:
+        from_secret: telegram_token
