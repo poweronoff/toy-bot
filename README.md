@@ -1,3 +1,5 @@
+[![Build Status](https://ci.poweronoff.click/api/badges/steam/toy-bot/status.svg)](https://ci.poweronoff.click/steam/toy-bot)
+
 # toy-bot
 
 Many thanks to [Lorenzo Sisini](https://github.com/lorenzosisini) (deactivated account) for this beautiful experience.
