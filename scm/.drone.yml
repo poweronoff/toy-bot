@@ -5,7 +5,7 @@ steps:
   -
     commands:
       - "mvn clean test"
-    image: "maven:3-openjdk-18"
+    image: "maven:3.8.2-openjdk-17"
     name: test
   -
     image: appleboy/drone-telegram
